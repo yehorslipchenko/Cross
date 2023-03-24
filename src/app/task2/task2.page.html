@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large">Сліпченко Єгор, КН-31, Варіант-14</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <h2>Завдання:</h2>
+  </ion-item>
+  <ion-item>
+    <p>На заданому проміжку чисел [a,b] знайти суму всіх, які кратні 19 та при
+      діленні на 3 дають в остачі 2.</p>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Введіть початок діпазону:</ion-label>
+    <ion-input type="number" [(ngModel)]="a"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Введіть кінець діапазону:</ion-label>
+    <ion-input type="number" [(ngModel)]="b"></ion-input>
+  </ion-item>
+  <ion-button routerLink="/home">Додому</ion-button>
+  <ion-button (click)="findSum()">Знайти суму</ion-button>
+  <p *ngIf="sum != 0">Сума чисел між {{a}} і {{b}} які кратні 19 і залишають залишок 2 при діленні на 3: {{sum}}</p>
+</ion-content>
+

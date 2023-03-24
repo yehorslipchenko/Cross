@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large">Сліпченко Єгор, КН-31, Варіант-14</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Лабораторні роботи
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Лабораторна робота №2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>Створити додаток для табулювання і виведення на екран значення функції, також побудувати графік функції</ion-text>
+    </ion-card-content>
+    <ion-item>
+      <ion-label>Xn:</ion-label>
+      <ion-input type="number" [(ngModel)]="xn"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Xk:</ion-label>
+      <ion-input type="number" [(ngModel)]="xk"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>a:</ion-label>
+      <ion-input type="number" [(ngModel)]="a"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>h:</ion-label>
+      <ion-input type="number" [(ngModel)]="h"></ion-input>
+    </ion-item>
+    <ion-button (click)="calculate()">Calculate</ion-button>
+
+    <div style="width: 80%; height: 400px; margin: 20px auto;">
+      <canvas #myChart></canvas>
+    </div>
+    <ion-item *ngFor="let item of result">{{item}}</ion-item>
+  </ion-card>
+</ion-content>

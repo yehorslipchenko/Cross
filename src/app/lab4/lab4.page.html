@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large">Сліпченко Єгор, КН-31, Варіант-14</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Лабораторні роботи
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Лабораторна робота №4</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>Скласти програму з абстрактним батьківським класом і двома
+        об'єктами – нащадками.
+        Реалізувати циклічне виведення параметрів об'єктів, використовуючи
+        поліморфний контейнер-
+        масив об'єктів базового класу (кількість об'єктів >= 5).
+      </ion-text>
+      <br>
+      <ion-text>
+        Завдання 2. Виконати обрахунки відповідно до варіанту.
+      </ion-text>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-text>Варіант: Собака (поле – порода) Такса (поле – довжина L в см, М - маса) Алабай L –висота в см, М - маса</ion-text>
+    </ion-card-content>
+    <ion-card-content>
+      <table>
+        <thead>
+          <tr>
+            <th>Порода</th>
+            <th>L</th>
+            <th>Масса</th>
+            <th>Кількість їжі на день</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dog of Dogs" [ngClass]="{'min-food': dog.amountOfFood === getMinFoodAmount()}">
+            <td>{{ dog.Breed }}</td>
+            <td>{{ dog.Length }}</td>
+            <td>{{ dog.M }}</td>
+            <td>{{ dog.amountOfFood }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

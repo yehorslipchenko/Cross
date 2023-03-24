@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large">Сліпченко Єгор, КН-31, Варіант-14</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Лабораторні роботи
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Лабораторна робота №3</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>Необхідно додати у розроблений в попередній лабораторній роботі
+        застосунок сторінку для обробки JSON файлу отриманого з серверу.</ion-text>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-text>Варіант: Список продаж за день: Дата, Кількість проданих товарів, Сума оплачених продажів, Сума продаж в кредит. Запит: Вивести на екран суми продаж по кожному дню.</ion-text>
+    </ion-card-content>
+    <ion-card-content>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Total Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sale of salesByDay">
+            <td>{{ sale.date }}</td>
+            <td>{{ sale.total_sales }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

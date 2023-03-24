@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="large">Сліпченко Єгор, КН-31, Варіант-14</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <h2>Завдання:</h2>
+  </ion-item>
+  <ion-item>
+    <p>Згенерувати матрицю розміром NxN. Знайти добуток усіх непарних чисел, що кратні 3. Ці числа позначити голубим.</p>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label>Розмірність:</ion-label>
+          <ion-input type="number" [(ngModel)]="matrixSize"></ion-input>
+          <ion-button (click)="generateMatrix()">Згенерувати матрицю</ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h2>Матриця</h2>
+        <table>
+          <tr *ngFor="let row of matrix">
+            <td *ngFor="let cell of row" [style.color]="cell % 3 === 0 && cell % 2 === 1 ? 'blue' : 'white'">{{cell}}</td>
+          </tr>
+        </table>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h2>Result</h2>
+        <p *ngIf="blueNumbers.length > 0">
+          Добуток всіх блакитних чисел (непарні що кратні 3) є {{product}}.
+        </p>
+        <p *ngIf="blueNumbers.length === 0">
+          Блакитних чисел немає (непарні що кратні 3) в матриці.
+        </p>
+        <ul>
+          <li *ngFor="let number of blueNumbers" [style.color]="'blue'">{{number}}</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

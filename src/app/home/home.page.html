@@ -1,7 +1,15 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
     <ion-title>
-      Blank
+      Сліпченко Єгор, КН-31, Варіант-14
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Лабораторні роботи
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +17,19 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button menu="first"></ion-menu-button>
+      </ion-buttons>
+      <ion-title size="large">Сліпченко Єгор, КН-31, Варіант-14</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h2>Лабораторна робота №1.</h2>
+    <h3>Знайомство з Ionic</h3>
+    <p>Оберіть завдання:</p>
+    <ion-button routerLink="/task1" class="task-button">До завдання 1</ion-button>
+    <ion-button routerLink="/task2" class="task-button">До завдання 2</ion-button>
+    <ion-button routerLink="/task3" class="task-button">До завдання 3</ion-button>
   </div>
 </ion-content>
