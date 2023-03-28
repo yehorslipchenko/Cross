@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 interface Sale {
   date: string;
@@ -24,7 +23,7 @@ export class Lab3Page implements OnInit {
   salesByDay: TotalSales[] = [];
   url: string = 'https://api.jsonbin.io/v3/b/6415feceace6f33a22f12bc1'
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   async ngOnInit() {
     await this.getSalesData();
