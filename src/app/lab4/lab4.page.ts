@@ -11,7 +11,7 @@ import { Dog } from './Entities/Dog';
 export class Lab4Page implements OnInit {
 
   Dogs: Dog[] = [];
-  count: number = 10;
+  count: number = 5;
   constructor() { }
 
   getRandom(max: number){
@@ -20,7 +20,6 @@ export class Lab4Page implements OnInit {
 
   ngOnInit() {
     this.CreateDogs();
-    console.log(this.Dogs);
   }
 
   CreateDogs(){

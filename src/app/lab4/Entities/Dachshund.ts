@@ -6,7 +6,7 @@ export class Dachshund extends Dog{
         super(Breed, M, Length);
     }
 
-    AmountOfFoodPerDay() {
+    override AmountOfFoodPerDay() {
         this.amountOfFood = this.Length * (1/this.M);
     }
 }
