@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Dachshund } from './Entities/Dachshund';
-import { Alabay } from './Entities/Alabay';
-import { Dog } from './Entities/Dog';
+import { Dachshund } from '../Entities/Dachshund';
+import { Alabay } from '../Entities/Alabay';
+import { Dog } from '../Entities/Dog';
 
 @Component({
   selector: 'app-lab4',

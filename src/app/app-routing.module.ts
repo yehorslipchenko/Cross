@@ -36,8 +36,8 @@ const routes: Routes = [
     loadChildren: () => import('./lab4/lab4.module').then( m => m.Lab4PageModule)
   },
   {
-    path: 'lab5',
-    loadChildren: () => import('./lab5/lab5.module').then( m => m.Lab5PageModule)
+    path: 'lab6',
+    loadChildren: () => import('./lab6/lab6.module').then( m => m.Lab6PageModule)
   },
 ];
 

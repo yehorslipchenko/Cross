@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-import { Alabay } from './Entities/Alabay';
-import { Dachshund } from './Entities/Dachshund';
+import { Alabay } from '../Entities/Alabay';
+import { Dachshund } from '../Entities/Dachshund';
 
 import { Lab4Page } from './lab4.page';
 
