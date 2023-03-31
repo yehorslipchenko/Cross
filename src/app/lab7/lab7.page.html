@@ -1,0 +1,69 @@
+<app-my-header name="Лабораторна робота №7"></app-my-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Завдання:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+        <ul>
+          <li>Розробити сервіс для табулювання функції відповідно до варіанту.</li>
+          <li>Розробити сервіс для розрахунку значень функції за допомогою ряду відповідно до варіанту.</li>
+          <li>Розробити сервіс для розрахунку значень функції за допомогою рекурсії відповідно до варіанту.</li>
+          <li>Розробити сервіс для логування обчислених значень у консоль та використати його у попередніх трьох сервісах</li>
+          <li>У основному застосунку підключити сервіси, вивести результати усіх розрахунків та побудувати графіки для усіх обрахунків.</li>
+          <li>Для перевірки роботи розроблених сервісів необхідно використовувати Unit тести.</li>
+      </ul>
+      </ion-text>
+      <br>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-text>Варіант:</ion-text>
+      <div class="img_task"></div>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Xn:</ion-label>
+        <ion-input type="number" [(ngModel)]="xn"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Xk:</ion-label>
+        <ion-input type="number" [(ngModel)]="xk"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>h:</ion-label>
+        <ion-input type="number" [(ngModel)]="h"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Оберіть варінт підрахунку:</ion-label>
+        <ion-button (click)="teylors()">Ряд Тейлора</ion-button>
+        <ion-button (click)="tabulation()">Бібліотека Math</ion-button>
+        <ion-button (click)="recurcive()">Рекурсія</ion-button>
+        
+      </ion-item>
+      <ion-item>
+        <div style="width: 100%; height: 400px; margin: 20px auto;">
+          <canvas id="myChart"></canvas>
+        </div>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content>
+      <table>
+        <thead>
+          <tr>
+            <th>x</th>
+            <th>f(x)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let xy of data">
+            <td>{{ xy.x }}</td>
+            <td>{{ xy.y }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
